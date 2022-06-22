@@ -1,5 +1,8 @@
 module.exports = {
   extends: ['@qsalatiel/eslint-config-typescript'],
+  rules: {
+    'import/no-extraneous-dependencies': 0,
+  },
   settings: {
     'import/resolver': {
       alias: {

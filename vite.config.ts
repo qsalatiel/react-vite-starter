@@ -1,15 +1,17 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 /* eslint-disable import/no-extraneous-dependencies */
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@components': resolve(__dirname, 'src/components'),
-      '@config': resolve(__dirname, 'src/config'),
-    },
+  plugins: [react(), tsconfigPaths()],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/config/testing.ts',
   },
 })

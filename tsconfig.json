@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "types": ["vitest/globals"],
+    "typeRoots": ["node_modules/@types"],
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -14,21 +16,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
-    // "baseUrl": ".",
-    // "paths": {
-    //   "@pages": ["src/pages/*"],
-    //   "@components": ["src/components/*"],
-    //   "@config": ["src/config/*"],
-    //   "@assets": ["src/assets/*"],
-    //   "@services": ["src/services/*"],
-    //   "@requests": ["src/requests/*"],
-    //   "@contracts": ["src/contracts/*"],
-    //   "@enums": ["src/enums/*"],
-    //   "@utils": ["src/utils/*"]
-    // }
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@config/*": ["src/config/*"],
+      "@utils/*": ["src/utils/*"]
+    }
   },
   "include": ["./src/**/*"],
-  "exclude": ["node_modules"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": ["node_modules"]
 }
