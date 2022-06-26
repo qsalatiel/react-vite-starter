@@ -1,18 +1,28 @@
 import { Route, Routes } from 'react-router-dom'
-import { Input } from '@components/Input'
+
+// ADMIN PAGES
+import { EditQuestionPage } from '@pages/admin/EditQuestionPage/EditQuestionPage'
 
 import './App.css'
 
 const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <h1> Vite React App </h1>
-      <Input label="asd" name="asdasd" />
-      <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
-        <Route path="about" element={<h1>About</h1>} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<h1>Home</h1>} />
+
+      <Route path="admin">
+        <Route path="question/edit/:questionId" element={<EditQuestionPage />} />
+      </Route>
+
+      <Route
+        path="*"
+        element={
+          <main style={{ padding: '1rem' }}>
+            <p>Page Not Found!</p>
+          </main>
+        }
+      />
+    </Routes>
   )
 }
 

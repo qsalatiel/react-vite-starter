@@ -1,0 +1,13 @@
+.tox.tox-tinymce {
+  border-width: 2px;
+  border-radius: 16px;
+}
+
+.tox.tox-statusbar__resize-handle {
+  margin-right: -4px;
+  margin-bottom: 4px;
+}
+
+.mce-content-body {
+  background-color: red;
+}

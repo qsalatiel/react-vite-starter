@@ -9,7 +9,10 @@ module.exports = {
         map: [
           ['@pages', './src/pages'],
           ['@components', './src/components'],
+          ['@templates', './src/components/templates'],
           ['@config', './src/config'],
+          ['@pages', './src/pages'],
+          ['@routes', './src/routes'],
           ['@assets', './src/assets'],
           ['@services', './src/services'],
           ['@requests', './src/requests'],
